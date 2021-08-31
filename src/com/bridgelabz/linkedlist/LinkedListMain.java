@@ -20,6 +20,13 @@ public class LinkedListMain {
 		linkedList.insertInBetween(secondNode, firstNode, thirdNode);
 		linkedList.printLinkedList();
 		
-		linkedList.search(30);
+		Node<Integer> result = linkedList.search(30);
+		if(result != null) {
+			System.out.println("Node Found");
+		}
+		else {
+			System.out.println("Node Not Found!");
+		}
+		
 	}
 }
