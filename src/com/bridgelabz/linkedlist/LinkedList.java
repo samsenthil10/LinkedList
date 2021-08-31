@@ -120,4 +120,14 @@ public class LinkedList<K> {
 		}
 		return temp;
 	}
+	
+	public void insertAfterKey(K searchKey, K newKey) {
+		
+		Node<K> temp = new Node<>();
+		temp.setKey(newKey);
+		Node<K> tempPrev = search(searchKey);
+		Node<K> tempNext = tempPrev.getNext();
+		tempPrev.setNext(temp);
+		temp.setNext(tempNext);
+	}
 }
