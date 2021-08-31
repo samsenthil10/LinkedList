@@ -57,7 +57,7 @@ public class LinkedList<K> {
 			tail.setNext(null);
 		}
 	}
-	
+
 	public void insertInBetween(Node<K> node, Node<K> previousNode, Node<K> nextNode) {
 		Node<K> temp = head;
 		while(temp != null) {
@@ -75,11 +75,38 @@ public class LinkedList<K> {
 			System.out.println("Nodes Not Found!");
 		}
 	}
-	
+
 	public void deleteAtFirst() {
-		
-		Node<K> temp = head;
-		head = temp.getNext();
-		temp = null;
+		if(head == null) {
+			return;
+		}
+		else if(head == tail)
+		{
+			head = tail = null;
+		}
+		else {
+
+			Node<K> temp = head;
+			head = temp.getNext();
+			temp = null;
+		}
+	}
+
+	public void deleteAtLast() {
+		if(head == null) {
+			return;
+		}
+		else if(head == tail)
+		{
+			head = tail = null;
+		}
+		else {
+			Node<K> temp = head;
+			while(temp.getNext() != tail) {
+				temp=temp.getNext();
+			}
+			tail = temp;
+			tail.setNext(null);
+		}
 	}
 }
