@@ -57,4 +57,22 @@ public class LinkedList<K> {
 			tail.setNext(null);
 		}
 	}
+	
+	public void insertInBetween(Node<K> node, Node<K> previousNode, Node<K> nextNode) {
+		Node<K> temp = head;
+		while(temp != null) {
+			if(temp == previousNode && temp.getNext() == nextNode) {
+				break;
+			}
+			temp = temp.getNext();
+		}
+		if (temp != null) {
+			Node<K> temp1 = temp.getNext();
+			temp.setNext(node);
+			node.setNext(temp1);
+		}
+		else {
+			System.out.println("Nodes Not Found!");
+		}
+	}
 }
