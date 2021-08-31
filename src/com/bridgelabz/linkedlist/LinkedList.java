@@ -120,14 +120,44 @@ public class LinkedList<K> {
 		}
 		return temp;
 	}
-	
+
 	public void insertAfterKey(K searchKey, K newKey) {
-		
+
 		Node<K> temp = new Node<>();
 		temp.setKey(newKey);
 		Node<K> tempPrev = search(searchKey);
 		Node<K> tempNext = tempPrev.getNext();
 		tempPrev.setNext(temp);
 		temp.setNext(tempNext);
+	}
+
+	public void deleteNodeWithKey(K searchKey) {
+
+		if(head == null) {
+			return;
+		}
+		else if((head.getKey().equals(searchKey)))
+		{
+			if(head.getNext()==null) {
+				head = tail = null;
+			}
+			else {
+				Node<K> temp =head;
+				head = temp.getNext();
+				temp = null;
+			}
+		}
+		else if(search(searchKey)!=null) {
+			Node<K> tempPrevious = head;
+			while(!tempPrevious.getNext().getKey().equals(searchKey))
+				tempPrevious = tempPrevious.getNext();
+			Node<K> temp = search(searchKey);
+			Node<K> tempNext = temp.getNext();	
+			temp = null;
+			tempPrevious.setNext(tempNext);
+		}
+		else {
+			System.out.println("Node Not Found");
+		}
 	}
 }
