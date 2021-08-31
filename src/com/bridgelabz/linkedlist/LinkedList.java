@@ -31,16 +31,30 @@ public class LinkedList<K> {
 			}
 		}
 	}
-	
+
 	public void add(Node<K> node) {
-		
+
 		if(head == null) {
 			head = node;
 			tail = node;
+			tail.setNext(null);
 		}
 		else {
 			node.setNext(head);
 			head = node;
+		}
+	}
+
+	public void append(Node<K> node) {
+
+		if(head == null) {
+			head = node;
+			tail = node;
+		}
+		else{
+			tail.setNext(node);
+			tail = node;
+			tail.setNext(null);
 		}
 	}
 }
