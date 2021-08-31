@@ -18,16 +18,29 @@ public class LinkedList<K> {
 		this.tail = tail;
 	}
 
-	public void printLinkedList(Node<K> node) {
-		while(node != null) {
-			if(node.getNext()!=null) {
-				System.out.print(node.getKey()+"->");
-				node = node.getNext();
+	public void printLinkedList() {
+		Node<K> temp = head;
+		while(temp != null) {
+			if(temp.getNext()!= null) {
+				System.out.print(temp.getKey()+"->");
+				temp = temp.getNext();
 			}
 			else {
-				System.out.println(node.getKey());
-				node = node.getNext();
+				System.out.println(temp.getKey());
+				temp = temp.getNext();
 			}
+		}
+	}
+	
+	public void add(Node<K> node) {
+		
+		if(head == null) {
+			head = node;
+			tail = node;
+		}
+		else {
+			node.setNext(head);
+			head = node;
 		}
 	}
 }
