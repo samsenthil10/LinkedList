@@ -13,11 +13,11 @@ public class LinkedListMain {
 		Node<Integer> thirdNode = new Node<>();
 		thirdNode.setKey(70);
 		
-		linkedList.add(thirdNode);
+		linkedList.append(firstNode);
 		linkedList.printLinkedList();
-		linkedList.add(secondNode);
+		linkedList.append(secondNode);
 		linkedList.printLinkedList();
-		linkedList.add(firstNode);
+		linkedList.append(thirdNode);
 		linkedList.printLinkedList();
 	}
 }
