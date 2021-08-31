@@ -75,4 +75,11 @@ public class LinkedList<K> {
 			System.out.println("Nodes Not Found!");
 		}
 	}
+	
+	public void deleteAtFirst() {
+		
+		Node<K> temp = head;
+		head = temp.getNext();
+		temp = null;
+	}
 }
