@@ -17,4 +17,17 @@ public class LinkedList<K> {
 	public void setTail(Node<K> tail) {
 		this.tail = tail;
 	}
+
+	public void printLinkedList(Node<K> node) {
+		while(node != null) {
+			if(node.getNext()!=null) {
+				System.out.print(node.getKey()+"->");
+				node = node.getNext();
+			}
+			else {
+				System.out.println(node.getKey());
+				node = node.getNext();
+			}
+		}
+	}
 }
