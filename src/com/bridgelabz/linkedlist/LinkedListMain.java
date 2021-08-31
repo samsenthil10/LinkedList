@@ -21,5 +21,7 @@ public class LinkedListMain {
 		linkedList.printLinkedList();
 		linkedList.insertAfterKey(30, 40);
 		linkedList.printLinkedList();
+		linkedList.deleteNodeWithKey(40);
+		linkedList.printLinkedList();
 	}
 }
