@@ -109,4 +109,22 @@ public class LinkedList<K> {
 			tail.setNext(null);
 		}
 	}
+
+	public void search(K key) {
+		Node<K> temp = head;
+		int positionOfNode=1;
+		while(temp!=null) {
+			if(temp.getKey().equals(key)) {
+				break;
+			}
+			temp=temp.getNext();
+			positionOfNode++;
+		}
+		if(temp != null) {
+			System.out.println("Key Found at position: "+positionOfNode);
+		}
+		else {
+			System.out.println("Key Not Found!");
+		}
+	}
 }
