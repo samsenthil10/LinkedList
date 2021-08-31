@@ -19,7 +19,7 @@ public class LinkedListMain {
 		linkedList.printLinkedList();
 		linkedList.insertInBetween(secondNode, firstNode, thirdNode);
 		linkedList.printLinkedList();
-		linkedList.deleteAtLast();
-		linkedList.printLinkedList();
+		
+		linkedList.search(30);
 	}
 }
