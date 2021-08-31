@@ -15,9 +15,9 @@ public class LinkedListMain {
 		
 		linkedList.append(firstNode);
 		linkedList.printLinkedList();
-		linkedList.append(secondNode);
-		linkedList.printLinkedList();
 		linkedList.append(thirdNode);
+		linkedList.printLinkedList();
+		linkedList.insertInBetween(secondNode, firstNode, thirdNode);
 		linkedList.printLinkedList();
 	}
 }
