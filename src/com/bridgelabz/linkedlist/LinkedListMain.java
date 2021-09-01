@@ -5,19 +5,20 @@ public class LinkedListMain {
 	public static void main(String[] args) {
 		
 		
+		SortedLinkedList<Integer> sortedLinkedList = new SortedLinkedList<>();
 		LinkedList<Integer> linkedList = new LinkedList<>();
-		Node<Integer> firstNode = new Node<>();
+		NodeImpl<Integer> firstNode = new NodeImpl<>();
 		firstNode.setKey(56);
-		Node<Integer> secondNode = new Node<>();
+		NodeImpl<Integer> secondNode = new NodeImpl<>();
 		secondNode.setKey(30);
-		Node<Integer> thirdNode = new Node<>();
+		NodeImpl<Integer> thirdNode = new NodeImpl<>();
 		thirdNode.setKey(70);
 		
-		linkedList.addOrderedList(firstNode);
+		sortedLinkedList.addOrderedList(firstNode, linkedList);
 		linkedList.printLinkedList();
-		linkedList.addOrderedList(secondNode);
+		sortedLinkedList.addOrderedList(secondNode, linkedList);
 		linkedList.printLinkedList();
-		linkedList.addOrderedList(thirdNode);
+		sortedLinkedList.addOrderedList(thirdNode, linkedList);
 		linkedList.printLinkedList();
 	}
 }
