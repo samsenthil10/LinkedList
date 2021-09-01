@@ -15,13 +15,18 @@ public class LinkedListMain {
 		
 		linkedList.append(firstNode);
 		linkedList.printLinkedList();
+		System.out.println(linkedList.sizeOfList());
 		linkedList.append(thirdNode);
 		linkedList.printLinkedList();
+		System.out.println(linkedList.sizeOfList());
 		linkedList.insertInBetween(secondNode, firstNode, thirdNode);
 		linkedList.printLinkedList();
+		System.out.println(linkedList.sizeOfList());
 		linkedList.insertAfterKey(30, 40);
 		linkedList.printLinkedList();
+		System.out.println(linkedList.sizeOfList());
 		linkedList.deleteNodeWithKey(40);
 		linkedList.printLinkedList();
+		System.out.println(linkedList.sizeOfList());
 	}
 }
