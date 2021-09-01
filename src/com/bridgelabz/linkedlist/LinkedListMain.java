@@ -13,20 +13,14 @@ public class LinkedListMain {
 		Node<Integer> thirdNode = new Node<>();
 		thirdNode.setKey(70);
 		
-		linkedList.append(firstNode);
+		linkedList.addOrderedList(firstNode);
 		linkedList.printLinkedList();
-		System.out.println(linkedList.sizeOfList());
-		linkedList.append(thirdNode);
+		linkedList.addOrderedList(secondNode);
 		linkedList.printLinkedList();
-		System.out.println(linkedList.sizeOfList());
-		linkedList.insertInBetween(secondNode, firstNode, thirdNode);
+		linkedList.addOrderedList(thirdNode);
 		linkedList.printLinkedList();
-		System.out.println(linkedList.sizeOfList());
-		linkedList.insertAfterKey(30, 40);
+		linkedList.addOrderedList(thirdNode1);
 		linkedList.printLinkedList();
-		System.out.println(linkedList.sizeOfList());
-		linkedList.deleteNodeWithKey(40);
-		linkedList.printLinkedList();
-		System.out.println(linkedList.sizeOfList());
+		
 	}
 }
