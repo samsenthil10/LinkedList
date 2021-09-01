@@ -160,4 +160,14 @@ public class LinkedList<K> {
 			System.out.println("Node Not Found");
 		}
 	}
+	
+	public int sizeOfList() {
+		int counter=0;
+		Node<K> temp = head;
+		while(temp!=null) {
+			counter++;
+			temp=temp.getNext();
+		}
+		return counter;
+	}
 }
