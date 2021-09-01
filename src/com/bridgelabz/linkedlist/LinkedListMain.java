@@ -19,8 +19,5 @@ public class LinkedListMain {
 		linkedList.printLinkedList();
 		linkedList.addOrderedList(thirdNode);
 		linkedList.printLinkedList();
-		linkedList.addOrderedList(thirdNode1);
-		linkedList.printLinkedList();
-		
 	}
 }
